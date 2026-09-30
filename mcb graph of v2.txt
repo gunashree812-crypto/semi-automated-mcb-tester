@@ -1,0 +1,21 @@
+def configure_plot(self):
+        self.ax.set_facecolor('#181825')
+        self.ax.set_title("MCB Trip Event: Current over 1 Second", color='#cdd6f4', fontsize=10)
+        self.ax.set_xlabel("Time (ms)", color='#a6adc8', fontsize=8)
+        self.ax.set_ylabel("Current (A)", color='#a6adc8', fontsize=8)
+        self.ax.tick_params(colors='#a6adc8', labelsize=8)
+        self.ax.grid(True, color='#313244', linestyle='--', linewidth=0.5)
+        self.ax.set_xlim(0, 1000)
+        # Default view range 0-100A to accommodate high-current trips
+        self.ax.set_ylim(0, 100) 
+
+    def update_graph(self):
+        self.ax.clear()
+        self.configure_plot()
+        if self.time_data and self.current_data:
+            self.ax.plot(self.time_data, self.current_data, color='#f9e2af', linewidth=2, marker='o', markersize=3)
+            max_curr = max(self.current_data)
+            # Dynamically adjust max ceiling if current exceeds default 100A
+            y_max = max(100, max_curr * 1.2)
+            self.ax.set_ylim(0, y_max)
+        self.canvas.draw()
