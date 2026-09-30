@@ -31,6 +31,8 @@ The system provides a controlled test station for MCB testing. A high-current te
   
 
 ### SOFTWARE 
+    PYTHON FOR HMI [HUMAN MACHINE INTERFACE]
+
 ## System Description
 
 This machine utilizes an **STM32F103C8T6 (Blue Pill)** as its main microcontroller. The controller is responsible for controlling and isolating the MCB under test through **motor drives and servo motors**.
