@@ -45,12 +45,59 @@ On the power-supply side, a **custom-made high-current transformer** connected i
 
 The machine is capable of performing tests on:
 
-- **2-pole MCBs**
-- **3-pole MCBs**
-- **4-pole MCBs**
+    - **2-pole MCBs**
+    - **3-pole MCBs**
+    - **4-pole MCBs**
 
 ### Overall System
 
-The complete system integrates the **STM32F103C8T6 controller, motor drives, servo motors, current measurement, elapsed-time measurement, ESP32 wireless communication, HMI, and custom high-current power supply** into a semi-automated MCB testing platform.
----
+    The complete system integrates the **STM32F103C8T6 controller, motor drives, servo motors, current measurement, elapsed-time measurement, ESP32 wireless           communication, HMI, and custom high-current power supply** into a semi-automated MCB testing platform.
+## Working Sequence
 
+    1. The MCB under test is mounted in the testing setup.
+    2. The STM32F103C8T6 initializes and controls the testing system.
+    3. Motor drives and servo motors position and isolate the MCB as required.
+    4. The custom high-current transformer and XL inductors provide the required test current.
+    5. The current flowing through the MCB is measured by the data-acquisition system.
+    6. The elapsed time until the MCB operates is measured.
+    7. The acquired data is transmitted wirelessly through the ESP32.
+    8. The data is displayed on the HMI.
+    9. After completion of the test, the system returns to its safe state.
+## Advantages
+
+- Reduces manual intervention during testing
+- Provides repeatable test operation
+- Enables electronic measurement of current and trip time
+- Allows wireless transfer of test data to the HMI
+- Supports multiple MCB pole configurations
+- Integrates control, measurement and display into a single test platform
+
+## Applications
+
+The proposed system can be used for:
+
+- MCB testing laboratories
+- Electrical protection testing
+- Educational laboratories
+- Circuit-breaker testing demonstrations
+- Electrical equipment research and development
+
+## Future Improvements
+
+Possible future improvements include:
+
+- Automatic test-result storage
+- Improved measurement accuracy
+- Automatic generation of test reports
+- Touchscreen HMI
+- Remote monitoring
+- Automated MCB identification
+- Cloud-based data logging
+- Improved safety interlocks
+- Fully automated test sequencing
+
+  ## Team
+
+**Project:** Semi-Automated MCB Tester  
+**Domain:** Electrical Engineering / Embedded Systems / Automation  
+**Project Type:** Hardware Prototype / Hackathon Project
