@@ -18,8 +18,39 @@ The system provides a controlled test station for MCB testing. A high-current te
 - Provide a safer and more repeatable test workflow.
 - Provide wireless communication/monitoring where implemented.
 
-###HARDWARE COMPONENTS 
+### HARDWARE COMPONENTS 
+- STM32F10C3 [BLUEPILL]
+- ESP32
+- MOTAR DRIVE DVF8825
+- STEPPER MOTAR
+- 10KOHM RESISTOR
+- 33OHM RESISTOR
+- 10MF 25V CAPACITOR
+- COSTOM MADE HIGH CURRENT TRANSFORMER
+- DC-DC BUCK CONVERTER
+  
 
 ### SOFTWARE 
+## System Description
+
+This machine utilizes an **STM32F103C8T6 (Blue Pill)** as its main microcontroller. The controller is responsible for controlling and isolating the MCB under test through **motor drives and servo motors**.
+
+The system also handles **data acquisition**, including measurement of the current flowing through the MCB and measurement of the **elapsed trip time**. The acquired data is communicated wirelessly to the **HMI (Human-Machine Interface) through an ESP32**, where the test data is displayed.
+
+### Power Supply and High-Current Source
+
+On the power-supply side, a **custom-made high-current transformer** connected in series with **XL inductors** provides the required **short-circuit test current**. It also provides the required **auxiliary power supply for the microcontrollers**.
+
+### MCB Testing Capability
+
+The machine is capable of performing tests on:
+
+- **2-pole MCBs**
+- **3-pole MCBs**
+- **4-pole MCBs**
+
+### Overall System
+
+The complete system integrates the **STM32F103C8T6 controller, motor drives, servo motors, current measurement, elapsed-time measurement, ESP32 wireless communication, HMI, and custom high-current power supply** into a semi-automated MCB testing platform.
 ---
 
