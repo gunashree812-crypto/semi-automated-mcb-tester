@@ -53,10 +53,10 @@ The machine is capable of performing tests on:
 
 ### Overall System
 
-    The complete system integrates the **STM32F103C8T6 controller, motor drives, servo motors, current measurement, elapsed-time measurement, ESP32 wireless           communication, HMI, and custom high-current power supply** into a semi-automated MCB testing platform.
+ The complete system integrates the **STM32F103C8T6 controller, motor drives, servo motors, current measurement, elapsed-time measurement, ESP32 wireless           communication, HMI, and custom high-current power supply** into a semi-automated MCB testing platform.
+ 
 ## Working Sequence
-
-    1. The MCB under test is mounted in the testing setup.
+   1. The MCB under test is mounted in the testing setup.
     2. The STM32F103C8T6 initializes and controls the testing system.
     3. Motor drives and servo motors position and isolate the MCB as required.
     4. The custom high-current transformer and XL inductors provide the required test current.
@@ -65,6 +65,7 @@ The machine is capable of performing tests on:
     7. The acquired data is transmitted wirelessly through the ESP32.
     8. The data is displayed on the HMI.
     9. After completion of the test, the system returns to its safe state.
+      
 ## Advantages
 
 - Reduces manual intervention during testing
