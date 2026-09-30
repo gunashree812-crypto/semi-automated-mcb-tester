@@ -12,7 +12,7 @@ The system provides a controlled test station for MCB testing. A high-current te
 
 - Provide a universal MCB mounting/test station.
 - Support single-pole, SPN, DP, TP and FP MCB configurations.
-- Support the prototype target range of 0.5 A–63 A.
+- Support the prototype target range of C6 .
 - Automate the mechanical test-position operation using a stepper motor.
 - Measure current using a CT sensor and an STM32/measurement controller.
 - Provide a safer and more repeatable test workflow.
@@ -21,12 +21,12 @@ The system provides a controlled test station for MCB testing. A high-current te
 ### HARDWARE COMPONENTS 
 - STM32F10C3 [BLUEPILL]
 - ESP32
-- MOTAR DRIVE DVF8825
-- STEPPER MOTAR
+- MOTOR DRIVE DVF8825
+- STEPPER MOTOR
 - 10KOHM RESISTOR
 - 33OHM RESISTOR
 - 10MF 25V CAPACITOR
-- COSTOM MADE HIGH CURRENT TRANSFORMER
+- CUSTOM MADE HIGH CURRENT TRANSFORMER
 - DC-DC BUCK CONVERTER
   
 
